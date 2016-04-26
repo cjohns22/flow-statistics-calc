@@ -1,0 +1,211 @@
+body{
+	font-family:'ITC Franklin Gothic W01';
+}
+#header{
+	width:60%;
+	font-family: "ITC Franklin Gothic W01", Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+	color:#ccc;
+	height:80px;
+	padding:0 20%;
+}
+#page-title{
+	font-size:3em;
+	display: none;
+}
+#file-prompt{
+	width: 60%;
+	margin-left:20%;
+	
+	margin-top:100px;
+}
+#csv-file{
+	height:30px;
+	display: inline-block;
+	margin-top:30px;
+	margin-left: 20px;
+	font-size: .9em;
+}
+#footer{
+	width:100%;
+	height:130px;
+	text-align: center;
+	margin-top:300px;
+}
+#footer p, #footer h4{
+	color:#ccc;
+	text-transform: uppercase;
+}
+#footer .logo{
+	font-size: 5em;
+	margin: 10px 0;
+	font-family: 'Monoton';
+}
+#header .logo{
+	font-size: 3em;
+	margin: 10px 0;
+	font-family: 'Monoton';
+	width:300px;
+	display: inline-block;
+}
+#header .logo:hover{
+	cursor: pointer;
+}
+#btn-wrap{
+	width:100%;
+	text-align: center;
+	margin-top:70px;
+}
+.submit-btn{
+	height:30px;
+	width: 125px;
+	margin-top:25px;
+	background-color:#666;
+	border:0;
+	color:#fff;
+	border-radius: 2px;
+	text-transform: uppercase;
+}
+.submit-btn:hover{
+	cursor: pointer;
+	background-color:#404040;
+	transition: 0.3s;
+}
+.reset-btn{
+	height:30px;
+	width: 125px;
+	margin-top:25px;
+	background-color:#fff;
+	border: 1px solid #404040;
+	color:#404040;
+	border-radius: 2px;
+	text-transform: uppercase;
+}
+.reset-btn:hover{
+	cursor: pointer;
+	color:#fff;
+	background-color:#666;
+	transition: 0.3s;
+}
+.reset-btn:focus{
+	outline:0;
+}
+.submit-btn-splash{
+	height:30px;
+	width: 125px;
+	margin-top:25px;
+	background-color:#666;
+	border:0;
+	color:#fff;
+	border-radius: 2px;
+	text-transform: uppercase;
+}
+.submit-btn-splash:hover{
+	cursor: pointer;
+	background-color:#404040;
+	transition: 0.3s;
+}
+#directions{
+	width: 60%;
+	padding: 0 20%;
+	margin-top: 50px;
+	color: #404040;
+}
+ol{
+	text-align: left;
+}
+ol li{
+	margin-top: 10px;
+}
+.dir-script{
+	background: #e6e6e6;
+	margin: 20px 0 20px 0;
+	padding:10px;
+	font-weight: bold;
+	display: block;
+}
+.hidden{
+	display: none;
+}
+#file-status div.reponse{
+	display: inherit;
+}
+#file-status{
+	margin-left: 20px;
+	margin-top: 30px;
+	width:100%;
+}
+.fa{
+	position:absolute;
+	right:20%;
+	top:558px;
+}
+.fa-thumbs-up{
+	color:green;
+}
+.fa-thumbs-down{
+	color:red;
+}
+.read-success{
+	color:green;
+	font-weight:bold;
+}
+.read-fail{
+	color:red;
+	font-weight:bold;
+}
+#stat-wrap{
+	padding: 0 20%;
+}
+#select-stat-type h4, #select-stat-type h3{
+	color:#666;
+}
+#select-stat-type{
+	border:1px solid #ccc;
+	border-radius: 15px;
+	margin-top:75px;
+	padding:0px 30px 30px 30px;
+}
+#back-btn{
+	float: right;
+	margin-top: 35px;
+	font-size: .85em;
+	padding:5px 10px;
+	border-radius: 2px;
+}
+#back-btn:hover{
+	cursor: pointer;
+	background: #404040;
+	color: #fff;
+	transition: 0.3s;
+}
+#present-data-wrap{
+	padding: 10% 10px;
+	text-align:center;
+}
+/*---------------------Histogram----------------------*/
+.left{
+	float:left;
+}
+.right{
+	float:right;
+}
+#chart{
+	margin:30px 20px;
+}
+#slider-range{
+	width:80%;
+	height:3px;
+	background-color: red;
+}
+.ui-slider-range{
+	background-color: yellow
+}
+.ui-slider-handle{
+	height:5px;
+	width: 5px;
+}
+#bins .instruct-text{
+	display: inline-block;
+	margin-right:15px;
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<!--Filter for IE selectors-->
+<!--[if IE 8]><html lang="en-US" class="ie-8 ie-lte-8 ie-lte-9"><![endif]-->
+<!--[if IE 9]><html lang="en-US" class="ie-9 ie-lte-9"><![endif]-->
+<!--[if (gte IE 10)|!(IE)]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+	<head>
+		<meta charset = "UTF-8" />	
+		<title>Flow Statistics</title>
+	
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+		<script type="text/javascript" src="papaparse.min.js"></script>
+		<script type="text/javascript" src="water.js"></script>
+		<script type="text/javascript" src="load-statistics.js"></script>
+		<script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="water.css">
+		<link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/24365087-b739-4314-af6e-741946b60bef.css"/>
+		<link href='http://fonts.googleapis.com/css?family=Monoton' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	</head>
+	
+	<body class='page1'>
+		<div id="header" class='hidden'>
+			<p class='logo'>FSC</p>
+			<div id='back-btn'><< Back</div>
+		</div>
+
+
+		<div id='landing-page' class='hidden'>
+			<div id='directions'>
+				<h2 id='how-to-use'>How to use this program:</h2>
+				<ol>
+					<li>Ensure that all files are located in the same folder. Create input and output *.CSV files. The input file should have dates in the first column and streamflow in the last column. The output file should be blank.</li>
+					<li>Download the <a class='link' target="_blank" href="/home/chadjohnson/SideProjects/FlowStatistics/water.py">streamflow parser script</a> to your folder. This script will model undocumented flows between days such that the difference between days is no more that a week.</li>
+					<li>In the terminal, go to your project folder and run the following code:<span class='dir-script'> python streamflow_parser_script.py your_input.csv your_output.csv</span></li>
+					<li>Select <strong>your_output.csv</strong> (below) that you specified in step 3. This is the file used to generate statistical information.</li>
+					<li>Refresh this page to start over.</li>
+				</ol>
+			</div>
+
+			
+			<div id='file-prompt'>
+				<input id="csv-file" type="file" name="files">
+				<div id="file-status">
+					<div class="read-success hidden">Your file was processed successfully.</div>
+					<div class="read-fail hidden">Your file could not be read successfully. Refer to directions above.</div>
+				</div>
+				<div id='btn-wrap'>
+					<button class="reset-btn hidden">Reset</button>
+					<button type="submit" class="submit-btn hidden">Continue >></button>
+				</div>		
+			</div>
+		</div>
+
+
+		<div id="stat-wrap" class="hidden">
+			<div id="select-stat-type">
+				<h3>Select all that apply:</h3>
+				<h4>Graphs/Plots:</h4>
+				<input type="checkbox" class="stat" id="freq"/>Frequency Distribution
+				<input type="checkbox" class="stat" id="bp"/>Box Plot
+				<input type="checkbox" class="stat" id="ts"/>Time Series
+				<h4>Numerical Statistics:</h4>
+				<input type="checkbox" class="stat" id="avg"/>Average
+				<input type="checkbox" class="stat" id="sd"/>Standard Deviation
+				<input type="checkbox" class="stat" id="vari"/>Variance
+				<input type="checkbox" class="stat" id="minmax"/>Minimum/Maximum
+				<input type="checkbox" class="stat" id="corco"/>Correlation Coefficient
+			</div>
+			<div id='present-data-wrap'>
+			
+				<!--Frequency Distribution-->
+				<div id="freq-dist" class="hidden">
+					<div id="bins">
+						<p class="instruct-text">Specify the number of bins:</p><input type='text' name="number-of-bins" value="5">
+					</div>
+					<div id="chart"></div>
+					<div id="hist-range">
+						<p class="instruct-text left">Eliminate outliers with a range:</p>
+						<div id='slider-range'></div>
+						<div id="amount"></div>
+					</div>
+				</div>
+				<!--Box plot-->
+
+				<!--Time series-->
+			</div>
+
+		</div>
+
+		
+		
+		<div id="footer">
+			<p class='logo'>FSC</p>
+			<h4>Flow Statistics Calculator</h4>
+			<button type="submit" class="submit-btn-splash">get started</button>
+		</div>
+	</body>
+</html>
