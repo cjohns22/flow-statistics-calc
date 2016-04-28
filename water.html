@@ -11,11 +11,12 @@
 		<title>Flow Statistics</title>
 	
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-		<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+		<script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
 		<script type="text/javascript" src="papaparse.min.js"></script>
+		<script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
 		<script type="text/javascript" src="water.js"></script>
 		<script type="text/javascript" src="load-statistics.js"></script>
-		<script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+
 		<link rel="stylesheet" type="text/css" href="water.css">
 		<link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/24365087-b739-4314-af6e-741946b60bef.css"/>
 		<link href='http://fonts.googleapis.com/css?family=Monoton' rel='stylesheet' type='text/css'>
@@ -77,7 +78,7 @@
 					<div id="bins">
 						<p class="instruct-text">Specify the number of bins:</p><input type='text' name="number-of-bins" value="5">
 					</div>
-					<div id="chart"></div>
+					<div class="chart" id="hist-chart"></div>
 					<div id="hist-range">
 						<p class="instruct-text left">Eliminate outliers with a range:</p>
 						<div id='slider-range'></div>
@@ -85,7 +86,11 @@
 					</div>
 				</div>
 				<!--Box plot-->
+				<div id="bp-wrap" class="hidden">				
+					<div class="chart" id="bp-chart"></div>
 
+
+				</div>
 				<!--Time series-->
 			</div>
 
